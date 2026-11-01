@@ -29,7 +29,7 @@ export default function App() {
           </a>{" "}
           and Website hosted{" "}
           <a
-            href="https://github.com/Exploradora139"
+            href="https://explorer-react-weather.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
