@@ -6,7 +6,6 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -14,10 +13,16 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       wind: response.data.wind.speed,
       city: response.data.name,
     });
+  }
+
+  function search() {
+    const apiKey = "36399t92b73b5o4fa0b8a2cb798d68aa";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
@@ -27,12 +32,6 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCity(event.target.value);
-  }
-
-  function search() {
-    const apiKey = "36399t92b73b5o4fa0b8a2cb798d68aa";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
