@@ -20,7 +20,7 @@ export default function App() {
           </a>{" "}
           ,{" "}
           <a
-            href="https://github.com/Exploradora139"
+            href="https://github.com/Exploradora139/exploradora-react-weather-app"
             target="_blank"
             rel="noreferrer"
           >
