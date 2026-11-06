@@ -9,32 +9,29 @@ export default function App() {
         <Weather defaultCity="New York" />
 
         <footer>
-          Coded by
+          This project was coded by{" "}
           <a
             href="https://github.com/Exploradora139"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
-            {" "}
             Dora Lopez
           </a>{" "}
-          ,{" "}
+          and is{" "}
           <a
             href="https://github.com/Exploradora139/exploradora-react-weather-app"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
-            {" "}
             open-sourced on GitHub{" "}
           </a>{" "}
-          and Website hosted{" "}
+          and{" "}
           <a
             href="https://explorer-react-weather.netlify.app/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
-            {" "}
-            on Netlify
+            hosted on Netlify
           </a>
         </footer>
       </div>
